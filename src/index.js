@@ -1,8 +1,9 @@
 import './style.css';
 
 function component() {
-  const element = document.getElementById('title');
+  const element = document.querySelector('.container');
   element.classList.add('title');
+  element.textContent = 'test';
   return element;
 }
 
