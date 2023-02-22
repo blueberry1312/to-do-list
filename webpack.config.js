@@ -8,7 +8,7 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  mode: 'production',
+  mode: 'development',
   devServer: {
     static: './dist',
   },
