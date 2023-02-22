@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Lato', sans-serif;
+  src: url('./Lato-LightItalic.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .title {
   color: teal;
+  font-family: 'Lato', sans-serif;
 }
