@@ -108,7 +108,7 @@ To run the project, you need to open "index.html" file generated in dist folder.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/blueberry1312/to-do-list/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

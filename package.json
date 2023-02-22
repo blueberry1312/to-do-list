@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/blueberry1312/to-do-list/issues"
   },
-  "homepage": "https://github.com/blueberry1312/to-do-list",
+  "homepage": "https://blueberry1312.github.io/to-do-list/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
