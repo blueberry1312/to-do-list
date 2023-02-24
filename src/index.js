@@ -1,8 +1,8 @@
 import './style.css';
-import Tasks from './modules/tasks.js';
+import TasksList from './modules/taskslist.js';
 
 const inTsk = {};
-const objTasks = new Tasks();
+const objTasks = new TasksList();
 
 if (localStorage.savedTasks) {
   objTasks.tasks = JSON.parse(localStorage.getItem('savedTasks'));
@@ -23,7 +23,8 @@ btnAddTasks.addEventListener('click', () => {
     inTsk.description = inputElement.value;
     inTsk.completed = false;
     inTsk.index = objTasks.tasks.length;
-    objTasks.addTask(new Tasks(inTsk.description, inTsk.completed, inTsk.index));
+    objTasks.addTask(new TasksList(inTsk.description, inTsk.completed, inTsk.index));
+    objTasks.populateFields();
     inputElement.value = '';
   }
 });
@@ -36,7 +37,8 @@ inputElement.addEventListener('keyup', (e) => {
       inTsk.description = inputElement.value;
       inTsk.completed = false;
       inTsk.index = objTasks.tasks.length;
-      objTasks.addTask(new Tasks(inTsk.description, inTsk.completed, inTsk.index));
+      objTasks.addTask(new TasksList(inTsk.description, inTsk.completed, inTsk.index));
+      objTasks.populateFields();
       inputElement.value = '';
     }
   }
