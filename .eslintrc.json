@@ -22,6 +22,6 @@
     "ignorePatterns": [
       "dist/",
       "build/",
-      "modules/Sortable/"
+      "src/modules/Sortable/"
     ]
   }
