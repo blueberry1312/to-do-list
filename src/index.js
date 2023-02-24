@@ -1,5 +1,6 @@
 import './style.css';
 import Tasks from './modules/tasks.js';
+import Sortable from './modules/Sortable/Sortable.js';
 
 const inTsk = {};
 const objTasks = new Tasks();
@@ -48,6 +49,11 @@ btnClearTasks.addEventListener('click', () => {
   objTasks.populateFields();
   ulElement.innerHTML = '';
   root.append(objTasks.displayTasks(), btnClearTasks);
+});
+
+new Sortable(ulElement, {
+  animation: 350,
+  fallbackOnBody: false,
 });
 
 objTasks.displayTasks();
