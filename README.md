@@ -28,14 +28,22 @@
 # 📖 [To-Do-List] <a name="about-project"></a>
 
 
-**[To-Do-List]]** In this project, I built a simple HTML list of To Do tasks. The list will be styled according to the specifications listed. This simple web page will be built using webpack and served by a webpack dev server.
+**[To-Do-List]** In this project, I built a simple HTML list of To Do tasks. The list will be styled according to the specifications listed. This simple web page will be built using webpack and served by a webpack dev server.
  
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-HTML, CSS, JavaScript
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="">HTML</a></li>
+    <li><a href="">CSS</a></li>
+    <li><a href="">JavaScript</a></li>
+    <li><a href="">Webpack</a></li>
+  </ul>
+</details>
 
 ### Key Features <a name="key-features"></a>
 
@@ -47,7 +55,7 @@ HTML, CSS, JavaScript
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://blueberry1312.github.io/to-do-list/)
+- [Live Demo Link](https://blueberry1312.github.io/to-do-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -63,6 +71,8 @@ In order to run this project you need:
 -Github
 -Browser
 -Bash command line
+-Node.js
+-NPM
 
 ### Setup
 
@@ -72,11 +82,11 @@ git clone https://github.com/blueberry1312/to-do-list.git
 
 ### Install
 
-This project don't need installation (only need to clone repository).
+To install the project, you need to run `npm install`.
 
 ### Usage
 
-To run the project, you need to open "index.html" file generated in dist folder.
+To run the project, you need to run `npm start`. Will open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

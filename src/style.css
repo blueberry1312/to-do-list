@@ -66,15 +66,21 @@ label {
 
 .btn-add-tasks {
   margin-left: 383px;
-  margin-top: 17px;
-  position: fixed;
+  margin-top: 15px;
+  position: absolute;
   transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.fa-arrows-rotate {
+  cursor: pointer;
 }
 
 .icon-menu-container {
   padding: 0;
   width: min-content;
   margin-right: 7px;
+  cursor: move;
 }
 
 .checkbox-container {
@@ -105,4 +111,30 @@ label {
   cursor: pointer;
   align-self: center;
   margin: 1em;
+}
+
+.text-input {
+  color: #333;
+  display: block;
+  outline: none;
+  justify-self: baseline;
+  background: transparent;
+  box-shadow: none;
+  overflow: auto;
+  font-size: 1rem;
+  font-style: normal;
+  resize: none;
+  margin: 0;
+  margin-left: 0.5em;
+  padding: 0;
+  word-wrap: break-word;
+  width: 20rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.editing {
+  background-color: rgba(0, 128, 128, 0.185);
 }
