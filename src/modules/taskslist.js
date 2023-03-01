@@ -1,9 +1,6 @@
 import Sortable from './Sortable/Sortable.js';
 import Task from './tasks.js';
 
-const containerElement = document.querySelector('.container-todo');
-const ulElement = document.querySelector('.ul-element');
-
 class TasksList {
   constructor() {
     this.tasks = [];
@@ -38,6 +35,7 @@ class TasksList {
   }
 
   displayTasks = () => {
+    const ulElement = document.querySelector('.ul-element');
     ulElement.innerHTML = '';
     let i = -1;
     this.tasks.forEach((task) => {
@@ -143,6 +141,7 @@ class TasksList {
       ulElement.appendChild(li);
       return ulElement;
     });
+    const containerElement = document.querySelector('.container-todo');
     containerElement.appendChild(ulElement);
     return containerElement;
   };
