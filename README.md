@@ -100,6 +100,12 @@ To run the project, you need to run `npm start`. Will open [http://localhost:808
 - Twitter: [@nestorsitooo](https://twitter.com/nestorsitooo)
 - LinkedIn: [LinkedIn] (https://www.linkedin.com/in/nes-oro-658570225/)
 
+### 👤 Johnie:
+- GitHub: [@githubhandle](https://github.com/johnie261)
+- Twitter: [@twitterhandle](https://twitter.com/njorogejohnie)
+- LinkedIn: [LinkedIn]([https://linkedin.com/in/linkedinhandle](https://www.linkedin.com/in/john-njoroge-19b6a4245/))
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
