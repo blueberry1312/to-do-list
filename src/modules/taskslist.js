@@ -1,9 +1,6 @@
 import Sortable from './Sortable/Sortable.js';
 import Task from './tasks.js';
 
-const containerElement = document.querySelector('.container-todo');
-const ulElement = document.querySelector('.ul-element');
-
 class TasksList {
   constructor() {
     this.tasks = [];
@@ -14,9 +11,10 @@ class TasksList {
   };
 
   removeTask(task) {
-    const result = this.tasks.filter((b) => b !== task);
+    const result = this.tasks.filter((b) => b.index !== task.index);
     this.tasks = result;
     this.populateFields();
+    this.displayTasks();
   }
 
   addTask = (task) => {
@@ -38,6 +36,7 @@ class TasksList {
   }
 
   displayTasks = () => {
+    const ulElement = document.querySelector('.ul-element');
     ulElement.innerHTML = '';
     let i = -1;
     this.tasks.forEach((task) => {
@@ -56,6 +55,7 @@ class TasksList {
       textInput.classList.add('text-input', 'hidden');
       icon.classList.add('icon-menu-container');
       itemTaskElement.classList.add('item-element');
+      li.classList.add(`li${task.index}`);
       icon.innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
       const iconMenu = '<i class="fa-solid fa-ellipsis-vertical"></i>';
       const iconDelete = '<i class="fa-solid fa-trash-can"></i>';
@@ -143,6 +143,7 @@ class TasksList {
       ulElement.appendChild(li);
       return ulElement;
     });
+    const containerElement = document.querySelector('.container-todo');
     containerElement.appendChild(ulElement);
     return containerElement;
   };
