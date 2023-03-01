@@ -17,13 +17,30 @@ beforeAll(() => {
 </div>`;
 });
 
-describe('Testing addTask', () => {
+const objTasks = new TasksList();
+
+describe('Testing addTask and removeTask', () => {
   test('Using addTask to add new li element and increase the size of the task array', () => {
-    const objTasks = new TasksList();
     objTasks.addTask({
       description: 'Adding a new task to test',
       completed: false,
       index: 0,
+    });
+
+    objTasks.addTask({
+      description: 'Remove a new task to test',
+      completed: false,
+      index: 1,
+    });
+    const liElement = document.querySelectorAll('li');
+    expect(liElement.length).toEqual(2);
+  });
+
+  test('Removing li element and decreasing size of the array', () => {
+    objTasks.removeTask({
+      description: 'Remove a new task to test',
+      completed: false,
+      index: 1,
     });
     const liElement = document.querySelectorAll('li');
     expect(liElement.length).toEqual(1);
