@@ -43,7 +43,7 @@ inputElement.addEventListener('keyup', (e) => {
 });
 
 btnClearTasks.addEventListener('click', () => {
-  objTasks.clearcompletedTasks(objTasks);
+  objTasks.clearcompletedTasks();
   ulElement.innerHTML = '';
   root.append(objTasks.displayTasks(), btnClearTasks);
 });
