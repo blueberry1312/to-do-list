@@ -48,12 +48,20 @@ describe('Testing addTask and removeTask', () => {
   });
 });
 
-describe('Editing added task', () => {
+describe('Testing editTask, completedTask and clearcompletedTasks', () => {
   test('edit a task', () => {
     const liElement = document.querySelectorAll('li');
     const label = liElement[0].querySelector('label');
     const icon = liElement[0].querySelector('.icon-menu-container');
     objTasks.editTask('editing the task', label, icon);
-    expect(liElement[0].textContent).toEqual('editing the task') 
+    expect(liElement[0].textContent).toEqual('editing the task');
+  });
+  test('completed task', () => {
+    const liElement = document.querySelectorAll('li');
+    const checkBox = liElement[0].querySelector('input');
+    const label = liElement[0].querySelector('label');
+    checkBox.checked = true;
+    objTasks.completedTask(objTasks.tasks[0], checkBox, label);
+    expect(objTasks.tasks[0].completed).toEqual(true);
   });
 });
