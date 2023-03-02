@@ -3,18 +3,19 @@ import TasksList from './taskslist.js';
 beforeAll(() => {
   document.body.innerHTML = `
     <div class="root">
-    <div class="title">
+      <div class="title">
         <span>Today's To Do</span>
         <i class="fa-solid fa-arrows-rotate"></i>
-    </div>
-    <div class="container-todo">
+      </div>
+      <div class="container-todo">
         <input type="text" id="input-element" name="input-element" placeholder="Add to your list..." required>
         <ul class='ul-element'></ul>
         <div class="btn-add-tasks">
             <i class="fa-solid fa-arrow-turn-down"></i>
         </div>
-    </div>
-</div>`;
+      </div>
+      <button type="button" class="btn-clear-task">Clear all completed</button>
+    </div>`;
 });
 
 const objTasks = new TasksList();

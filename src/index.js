@@ -8,13 +8,11 @@ if (localStorage.savedTasks) {
   objTasks.tasks = JSON.parse(localStorage.getItem('savedTasks'));
 }
 
-const btnClearTasks = document.createElement('button');
+const btnClearTasks = document.querySelector('.btn-clear-task');
 const root = document.querySelector('.root');
 const ulElement = document.querySelector('.ul-element');
 const inputElement = document.getElementById('input-element');
 const btnAddTasks = document.querySelector('.btn-add-tasks');
-btnClearTasks.innerHTML = 'Clear all completed';
-btnClearTasks.classList.add('btn-clear-task');
 
 btnAddTasks.addEventListener('click', () => {
   if (inputElement.value === '') {
@@ -45,9 +43,7 @@ inputElement.addEventListener('keyup', (e) => {
 });
 
 btnClearTasks.addEventListener('click', () => {
-  const result = objTasks.tasks.filter((task) => task.completed === false);
-  objTasks.tasks = result;
-  objTasks.populateFields();
+  objTasks.clearcompletedTasks(objTasks);
   ulElement.innerHTML = '';
   root.append(objTasks.displayTasks(), btnClearTasks);
 });

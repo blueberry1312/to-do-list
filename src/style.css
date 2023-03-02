@@ -14,6 +14,8 @@ body {
   align-items: center;
   color: #333;
   height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 input {
@@ -42,6 +44,12 @@ li {
 
 label {
   margin-left: 0.5em;
+}
+
+.ul-element {
+  height: 40vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .title {

@@ -25,6 +25,31 @@ class TasksList {
     this.displayTasks();
   };
 
+  clearcompletedTasks = () => {
+    const result = this.tasks.filter((task) => task.completed === false);
+    this.tasks = result;
+    this.populateFields();
+  };
+
+  editTask = (text, label, icon) => {
+    label.innerHTML = text;
+    this.populateFields();
+    icon.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    icon.style.cursor = 'pointer';
+  };
+
+  completedTask = (task, checkBox, label) => {
+    if (checkBox.checked) {
+      label.style.textDecoration = 'line-through';
+      task.completed = checkBox.checked;
+      this.populateFields();
+    } else {
+      label.style.textDecoration = 'none';
+      task.completed = checkBox.checked;
+      this.populateFields();
+    }
+  };
+
   swapArrayElements = (array, indexA, indexB) => {
     const temp = array[indexA];
     array[indexA] = array[indexB];
@@ -99,10 +124,7 @@ class TasksList {
 
       textInput.addEventListener('change', (e) => {
         task.description = e.target.value;
-        label.innerHTML = task.description;
-        this.populateFields();
-        icon.innerHTML = iconDelete;
-        icon.style.cursor = 'pointer';
+        this.editTask(task.description, label, icon);
       });
 
       textInput.addEventListener('blur', () => {
@@ -116,15 +138,7 @@ class TasksList {
       });
 
       checkBox.addEventListener('click', () => {
-        if (checkBox.checked) {
-          label.style.textDecoration = 'line-through';
-          task.completed = checkBox.checked;
-          this.populateFields();
-        } else {
-          label.style.textDecoration = 'none';
-          task.completed = checkBox.checked;
-          this.populateFields();
-        }
+        this.completedTask(task, checkBox, label);
       });
 
       li.addEventListener('keyup', (e) => {
