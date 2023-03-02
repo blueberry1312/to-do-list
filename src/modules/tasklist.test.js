@@ -47,3 +47,13 @@ describe('Testing addTask and removeTask', () => {
     expect(liElement.length).toEqual(1);
   });
 });
+
+describe('Editing added task', () => {
+  test('edit a task', () => {
+    const liElement = document.querySelectorAll('li');
+    const label = liElement[0].querySelector('label');
+    const icon = liElement[0].querySelector('.icon-menu-container');
+    objTasks.editTask('editing the task', label, icon);
+    expect(liElement[0].textContent).toEqual('editing the task') 
+  });
+});
